@@ -1,6 +1,7 @@
 import { Group, Image } from "@mantine/core";
 import clsx from "clsx";
 import styles from './Header.module.css';
+import { NavLink } from "react-router-dom";
 
 import logo from '../../assets/logo.svg';
 import circle from '../../assets/circle.svg';
@@ -19,19 +20,39 @@ export const Header = () => {
                 </Group>
 
                 <Group className={styles.nav_links}>
-                    <a href="#"
-                    className={clsx(styles.nav_link, styles['nav_link-vacancies'])}
-                    >
-                    Вакансии FE
-                    <Image src={circle} alt="circle" />
-                    </a>
 
-                    <a href="#"
-                    className={clsx(styles.nav_link, styles['nav_link-about'])}
+                    <NavLink
+                        to='/vacancies'
+                        className= {({ isActive }) =>
+                            isActive
+                            ? clsx (
+                                styles['nav__link'],
+                                styles["nav__link-vacancies"],
+                                styles["active-link"]
+                            )
+                            : clsx(styles["nav__link"], styles["nav__link-vacancies"])
+                        }
                     >
-                    Обо мне
-                    <Image src={user} alt="circle" />
-                    </a>
+                            Вакансии FE
+                        <Image src={circle} alt="circle" />
+                    </NavLink>
+
+                    <NavLink
+                        to='/vacancies'
+                        className= {({ isActive }) =>
+                            isActive
+                            ? clsx (
+                                styles['nav__link'],
+                                styles["nav__link-about"],
+                                styles["active-link"]
+                            )
+                            : clsx(styles["nav__link"], styles["nav__link-about"])
+                        }
+                    >
+                            Обо мне
+                        <Image src={user} alt="user" />
+                    </NavLink>
+
                 </Group>
 
             </header>
