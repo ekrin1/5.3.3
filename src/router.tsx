@@ -3,6 +3,7 @@ import { VacancyPage } from "./pages/VacancyPage/VacancyPage";
 import { VacanciesList } from "./components/VacanciesList/VacanciesList";
 import { MainLayout } from "./layouts/MainLayout";
 import { ErrorPage } from "./pages/ErrorPage/ErrorPage";
+import { AboutPage } from "./pages/AboutPage/AboutPage";
 
 import { createBrowserRouter, createRoutesFromElements, Navigate, Route } from "react-router-dom";
 
@@ -10,11 +11,10 @@ export const router = createBrowserRouter(
 
   createRoutesFromElements (
 
-    <Route element={<MainLayout />}>
+    <Route path="/" element={<MainLayout />}>
 
       <Route
-        path="/"
-        element={<Navigate to="/vacancies" replace />}
+        index element={<Navigate to="/vacancies" replace />}
       />
 
       <Route path="vacancies/" element={<VacanciesPage />}>
@@ -27,6 +27,12 @@ export const router = createBrowserRouter(
       <Route
         path="vacancies/:id"
         element={<VacancyPage />}
+        errorElement={<ErrorPage />}
+      />
+
+      <Route
+        path="about"
+        element={<AboutPage />}
         errorElement={<ErrorPage />}
       />
 

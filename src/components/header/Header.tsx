@@ -38,7 +38,7 @@ export const Header = () => {
                     </NavLink>
 
                     <NavLink
-                        to='/vacancies'
+                        to='/about'
                         className= {({ isActive }) =>
                             isActive
                             ? clsx (
