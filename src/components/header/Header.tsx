@@ -11,15 +11,15 @@ export const Header = () => {
 
     return (
 
-        <div className={styles.header_container}>
+        <div className={styles.header__container}>
             <header className={styles.header}>
 
                 <Group className={styles.logo}>
-                    <Image className={styles.logo_image}
+                    <Image className={styles.logo__image}
                     src={logo} alt="HHlogo" />
                 </Group>
 
-                <Group className={styles.nav_links}>
+                <Group className={styles.nav__links}>
 
                     <NavLink
                         to='/vacancies'
