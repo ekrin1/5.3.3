@@ -1,4 +1,4 @@
-import { JobCard } from '../JobCard/JobCard';
+import { JobCard } from '../jobCard/jobCard';
 import { PaginationBar } from '../PaginationBar/PaginationBar';
 
 import { Skeleton } from "@mantine/core";

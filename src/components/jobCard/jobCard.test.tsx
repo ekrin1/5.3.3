@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import { MantineProvider } from "@mantine/core";
 import { MemoryRouter } from "react-router-dom";
-import { JobCard } from "./JobCard";
+import { JobCard } from "./jobCard";
 import type { JobType } from "../../services/types";
 
 vi.mock('../../utils/workFormat', () => ({
