@@ -17,7 +17,7 @@ export const router = createBrowserRouter(
         index element={<Navigate to="/vacancies" replace />}
       />
 
-      <Route path="vacancies/" element={<VacanciesPage />}>
+      <Route path="vacancies" element={<VacanciesPage />}>
         <Route index element={<VacanciesList />} />
         <Route path="moscow" element={<VacanciesList />} /> 
         <Route path="petersburg" element={<VacanciesList />} />
